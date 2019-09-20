@@ -44,8 +44,19 @@ function yall (options) {
 
     // Lazy load CSS background images
     if (classList.contains(lazyBackgroundClass)) {
+      element.setAttribute("style", `background-image: url("${element.dataset.src}");` );
       classList.remove(lazyBackgroundClass);
       classList.add(options.lazyBackgroundLoaded || "lazy-bg-loaded");
+      // let image = new Image();
+      
+      // image.onload =() => {
+      //   classList.remove(lazyBackgroundClass);
+      //   classList.add(options.lazyBackgroundLoaded || "lazy-bg-loaded");
+      //   element.setAttribute("style", `background-image: url("${element.dataset.src}");` );
+      //   console.log("loaded");
+      // };
+      // image.src = element.dataset.src;
+      // console.log(image);
     }
   };
 

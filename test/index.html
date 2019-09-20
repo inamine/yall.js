@@ -86,13 +86,13 @@
       }
 
       .css-bg-example.lazy-bg-loaded {
-        background-image: url("img/test-768w.jpg");
+        /*background-image: url("img/test-768w.jpg");*/
         background-size: 100% auto;
       }
 
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .css-bg-example.lazy-bg-loaded {
-          background-image: url("img/test-1536w.jpg");
+        /*  background-image: url("img/test-1536w.jpg");  */
           background-size: 100% auto;
         }
       }
@@ -205,10 +205,10 @@
       <iframe class="lazy" width="512" height="384" data-src="iframe.html"></iframe>
       <noscript>
         <iframe width="512" height="384" src="iframe.html"></iframe>
-      </noscript>
+      </noscript> 
       <h2>Lazy loading CSS background images:</h2>
       <div class="css-bg-example-container">
-        <div class="css-bg-example lazy-bg"></div>
+        <div class="css-bg-example lazy-bg" data-src="img/dog.jpg"></div>
       </div>
     </div>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
